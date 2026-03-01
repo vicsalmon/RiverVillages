@@ -3,6 +3,7 @@
 > **Note:** This was my very first academic project in University (Programming II). It holds a special place in my portfolio as it marks my foundational steps into Object-Oriented Programming (OOP) and Data Structures.
 
 ##About The Project
+
 This project is a C++ console-based simulation of a boat navigating through a network of villages. The environment (the river and its connected settlements) is modeled using a **Binary Tree** data structure. 
 
 The main goal of this project was not to build a commercial product, but rather to understand and apply core computer science concepts such as modular programming, memory management, and recursive algorithms.
