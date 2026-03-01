@@ -1,0 +1,299 @@
+\doxysection{Referencia de la clase Productos}
+\hypertarget{classProductos}{}\label{classProductos}\index{Productos@{Productos}}
+
+
+Representa un listado de pesos y volumenes.  
+
+
+
+
+{\ttfamily \#include $<$Productos.\+hh$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classProductos_a96b13e007793afd65af714d240188d47}{Productos}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProductos_ab78f33b557a115a043e89a8a62206fb3}{consultar\+\_\+peso}} (int \&id) const
+\begin{DoxyCompactList}\small\item\em Consultora del peso de un producto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProductos_ac4cd65c1efd2710b09b0dbaf354cd675}{consultar\+\_\+volumen}} (int \&id) const
+\begin{DoxyCompactList}\small\item\em Consultora del volumen de un producto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProductos_a2350545f5fc4a536ee03422d03f4a709}{consultar\+\_\+cantidad}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de la cantidad de productos existentes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProductos_ae583e753e9cbcf06c432cd1449f71d7c}{modificar\+\_\+peso}} (int \&id, int \&nuevopeso)
+\begin{DoxyCompactList}\small\item\em Modifica el peso de un producto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProductos_a9b240135d44805dbcbad62914a7cf429}{modificar\+\_\+volumen}} (int \&id, int \&nuevovolumen)
+\begin{DoxyCompactList}\small\item\em Modifica el volumen de un producto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProductos_a43e71682bce4e5ea1e417b5fba2fa66b}{anadir\+\_\+producto}} (int \&pesoprod, int \&volumenprod)
+\begin{DoxyCompactList}\small\item\em Añade un nuevo producto a ambos vectores de la clase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProductos_af684dbc894a174cfede72d314339af99}{escribir}} (int \&id) const
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{classProductos_a6a927d4368d0a6fcd48647e15e8fca52}{peso}}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{classProductos_af855d1fbc2a9d1bc6321a3204d1c1dc0}{volumen}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un listado de pesos y volumenes. 
+
+Si un producto existe, sus atributos se ven representados en esta clase 
+
+Definición en la línea \mbox{\hyperlink{Productos_8hh_source_l00019}{19}} del archivo \mbox{\hyperlink{Productos_8hh_source}{Productos.\+hh}}.
+
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classProductos_a96b13e007793afd65af714d240188d47}\index{Productos@{Productos}!Productos@{Productos}}
+\index{Productos@{Productos}!Productos@{Productos}}
+\doxysubsubsection{\texorpdfstring{Productos()}{Productos()}}
+{\footnotesize\ttfamily \label{classProductos_a96b13e007793afd65af714d240188d47} 
+Productos\+::\+Productos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar \doxylink{classProductos}{Productos} \begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es dos vectores vacíos de pesos y volumenes 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{Productos_8cc_source_l00008}{8}} del archivo \mbox{\hyperlink{Productos_8cc_source}{Productos.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ vector<int>\ \mbox{\hyperlink{classProductos_a6a927d4368d0a6fcd48647e15e8fca52}{peso}};}
+\DoxyCodeLine{00010\ \ \ \ \ vector<int>\ \mbox{\hyperlink{classProductos_af855d1fbc2a9d1bc6321a3204d1c1dc0}{volumen}};}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classProductos_a43e71682bce4e5ea1e417b5fba2fa66b}\index{Productos@{Productos}!anadir\_producto@{anadir\_producto}}
+\index{anadir\_producto@{anadir\_producto}!Productos@{Productos}}
+\doxysubsubsection{\texorpdfstring{anadir\_producto()}{anadir\_producto()}}
+{\footnotesize\ttfamily \label{classProductos_a43e71682bce4e5ea1e417b5fba2fa66b} 
+void Productos\+::anadir\+\_\+producto (\begin{DoxyParamCaption}\item[{int \&}]{pesoprod}{, }\item[{int \&}]{volumenprod}{}\end{DoxyParamCaption})}
+
+
+
+Añade un nuevo producto a ambos vectores de la clase. 
+
+\begin{DoxyPrecond}{Precondición}
+pesoprod \texorpdfstring{$>$}{>} 0, volumenprod \texorpdfstring{$>$}{>} 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Los vectores peso/volumen aumentan su tamaño en 1 con el peso/volumen del nuevo producto 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{Productos_8cc_source_l00021}{21}} del archivo \mbox{\hyperlink{Productos_8cc_source}{Productos.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ this-\/>\mbox{\hyperlink{classProductos_a6a927d4368d0a6fcd48647e15e8fca52}{peso}}.push\_back(pesoprod);}
+\DoxyCodeLine{00023\ \ \ \ \ this-\/>\mbox{\hyperlink{classProductos_af855d1fbc2a9d1bc6321a3204d1c1dc0}{volumen}}.push\_back(volumenprod);}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classProductos_a2350545f5fc4a536ee03422d03f4a709}\index{Productos@{Productos}!consultar\_cantidad@{consultar\_cantidad}}
+\index{consultar\_cantidad@{consultar\_cantidad}!Productos@{Productos}}
+\doxysubsubsection{\texorpdfstring{consultar\_cantidad()}{consultar\_cantidad()}}
+{\footnotesize\ttfamily \label{classProductos_a2350545f5fc4a536ee03422d03f4a709} 
+int Productos\+::consultar\+\_\+cantidad (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Consultora de la cantidad de productos existentes. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el tamaño del vector peso, equivalente a la cantidad de productos 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{Productos_8cc_source_l00034}{34}} del archivo \mbox{\hyperlink{Productos_8cc_source}{Productos.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classProductos_a6a927d4368d0a6fcd48647e15e8fca52}{peso}}.size();}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classProductos_ab78f33b557a115a043e89a8a62206fb3}\index{Productos@{Productos}!consultar\_peso@{consultar\_peso}}
+\index{consultar\_peso@{consultar\_peso}!Productos@{Productos}}
+\doxysubsubsection{\texorpdfstring{consultar\_peso()}{consultar\_peso()}}
+{\footnotesize\ttfamily \label{classProductos_ab78f33b557a115a043e89a8a62206fb3} 
+int Productos\+::consultar\+\_\+peso (\begin{DoxyParamCaption}\item[{int \&}]{id}{}\end{DoxyParamCaption}) const}
+
+
+
+Consultora del peso de un producto. 
+
+\begin{DoxyPrecond}{Precondición}
+id \texorpdfstring{$>$}{>} 0, el vector peso es de tamaño mayor o igual al id 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el peso de el producto con el id indicado 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{Productos_8cc_source_l00026}{26}} del archivo \mbox{\hyperlink{Productos_8cc_source}{Productos.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classProductos_a6a927d4368d0a6fcd48647e15e8fca52}{peso}}[\textcolor{keywordtype}{id}-\/1];}
+\DoxyCodeLine{00028\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classProductos_ac4cd65c1efd2710b09b0dbaf354cd675}\index{Productos@{Productos}!consultar\_volumen@{consultar\_volumen}}
+\index{consultar\_volumen@{consultar\_volumen}!Productos@{Productos}}
+\doxysubsubsection{\texorpdfstring{consultar\_volumen()}{consultar\_volumen()}}
+{\footnotesize\ttfamily \label{classProductos_ac4cd65c1efd2710b09b0dbaf354cd675} 
+int Productos\+::consultar\+\_\+volumen (\begin{DoxyParamCaption}\item[{int \&}]{id}{}\end{DoxyParamCaption}) const}
+
+
+
+Consultora del volumen de un producto. 
+
+\begin{DoxyPrecond}{Precondición}
+id \texorpdfstring{$>$}{>} 0, el vector volumen es de tamaño mayor o igual al id 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el volumen de el producto con el id indicado 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{Productos_8cc_source_l00030}{30}} del archivo \mbox{\hyperlink{Productos_8cc_source}{Productos.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classProductos_af855d1fbc2a9d1bc6321a3204d1c1dc0}{volumen}}[\textcolor{keywordtype}{id}-\/1];}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classProductos_af684dbc894a174cfede72d314339af99}\index{Productos@{Productos}!escribir@{escribir}}
+\index{escribir@{escribir}!Productos@{Productos}}
+\doxysubsubsection{\texorpdfstring{escribir()}{escribir()}}
+{\footnotesize\ttfamily \label{classProductos_af684dbc894a174cfede72d314339af99} 
+void Productos\+::escribir (\begin{DoxyParamCaption}\item[{int \&}]{id}{}\end{DoxyParamCaption}) const}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+los vectores peso y volumen son de tamaño mayor o igual a id 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe el peso y el volumen del producto con el id indicado 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{Productos_8cc_source_l00038}{38}} del archivo \mbox{\hyperlink{Productos_8cc_source}{Productos.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ cout\ <<\ \textcolor{keywordtype}{id}\ <<\ \textcolor{charliteral}{'\ '}\ <<\ \mbox{\hyperlink{classProductos_ab78f33b557a115a043e89a8a62206fb3}{consultar\_peso}}(\textcolor{keywordtype}{id})\ <<\ \textcolor{charliteral}{'\ '}\ <<\ \mbox{\hyperlink{classProductos_ac4cd65c1efd2710b09b0dbaf354cd675}{consultar\_volumen}}(\textcolor{keywordtype}{id})\ <<\ endl;}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classProductos_ae583e753e9cbcf06c432cd1449f71d7c}\index{Productos@{Productos}!modificar\_peso@{modificar\_peso}}
+\index{modificar\_peso@{modificar\_peso}!Productos@{Productos}}
+\doxysubsubsection{\texorpdfstring{modificar\_peso()}{modificar\_peso()}}
+{\footnotesize\ttfamily \label{classProductos_ae583e753e9cbcf06c432cd1449f71d7c} 
+void Productos\+::modificar\+\_\+peso (\begin{DoxyParamCaption}\item[{int \&}]{id}{, }\item[{int \&}]{nuevopeso}{}\end{DoxyParamCaption})}
+
+
+
+Modifica el peso de un producto. 
+
+\begin{DoxyPrecond}{Precondición}
+El vector peso es de tamaño mayor o igual al id, nuevopeso \texorpdfstring{$>$}{>} 0, id \texorpdfstring{$>$}{>} 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La posición del vector peso de índice id-\/1 toma por valor nuevopeso 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{Productos_8cc_source_l00013}{13}} del archivo \mbox{\hyperlink{Productos_8cc_source}{Productos.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ this-\/>\mbox{\hyperlink{classProductos_a6a927d4368d0a6fcd48647e15e8fca52}{peso}}[\textcolor{keywordtype}{id}-\/1]\ =\ nuevopeso;}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classProductos_a9b240135d44805dbcbad62914a7cf429}\index{Productos@{Productos}!modificar\_volumen@{modificar\_volumen}}
+\index{modificar\_volumen@{modificar\_volumen}!Productos@{Productos}}
+\doxysubsubsection{\texorpdfstring{modificar\_volumen()}{modificar\_volumen()}}
+{\footnotesize\ttfamily \label{classProductos_a9b240135d44805dbcbad62914a7cf429} 
+void Productos\+::modificar\+\_\+volumen (\begin{DoxyParamCaption}\item[{int \&}]{id}{, }\item[{int \&}]{nuevovolumen}{}\end{DoxyParamCaption})}
+
+
+
+Modifica el volumen de un producto. 
+
+\begin{DoxyPrecond}{Precondición}
+El vector volumen es de tamaño mayor o igual al id, nuevovolumen \texorpdfstring{$>$}{>} 0, id \texorpdfstring{$>$}{>} 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La posición del vector volumen de índice id-\/1 toma por valor nuevovolumen 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{Productos_8cc_source_l00017}{17}} del archivo \mbox{\hyperlink{Productos_8cc_source}{Productos.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ this-\/>\mbox{\hyperlink{classProductos_af855d1fbc2a9d1bc6321a3204d1c1dc0}{volumen}}[\textcolor{keywordtype}{id}-\/1]\ =\ nuevovolumen;}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classProductos_a6a927d4368d0a6fcd48647e15e8fca52}\index{Productos@{Productos}!peso@{peso}}
+\index{peso@{peso}!Productos@{Productos}}
+\doxysubsubsection{\texorpdfstring{peso}{peso}}
+{\footnotesize\ttfamily \label{classProductos_a6a927d4368d0a6fcd48647e15e8fca52} 
+vector$<$int$>$ Productos\+::peso\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Productos_8hh_source_l00021}{21}} del archivo \mbox{\hyperlink{Productos_8hh_source}{Productos.\+hh}}.
+
+\Hypertarget{classProductos_af855d1fbc2a9d1bc6321a3204d1c1dc0}\index{Productos@{Productos}!volumen@{volumen}}
+\index{volumen@{volumen}!Productos@{Productos}}
+\doxysubsubsection{\texorpdfstring{volumen}{volumen}}
+{\footnotesize\ttfamily \label{classProductos_af855d1fbc2a9d1bc6321a3204d1c1dc0} 
+vector$<$int$>$ Productos\+::volumen\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Productos_8hh_source_l00022}{22}} del archivo \mbox{\hyperlink{Productos_8hh_source}{Productos.\+hh}}.
+
+
+
+La documentación de esta clase está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Productos_8hh}{Productos.\+hh}}\item 
+\mbox{\hyperlink{Productos_8cc}{Productos.\+cc}}\end{DoxyCompactItemize}

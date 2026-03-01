@@ -1,0 +1,71 @@
+\doxysection{Barco.\+cc}
+\hypertarget{Barco_8cc_source}{}\label{Barco_8cc_source}\mbox{\hyperlink{Barco_8cc}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Barco_8hh}{Barco.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00008}\mbox{\hyperlink{classBarco_aea54a1f00318af549e695999ccf08e38}{00008}}\ \mbox{\hyperlink{classBarco_aea54a1f00318af549e695999ccf08e38}{Barco::Barco}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00009}00009\ \ \ \ \ pair<int,int>\ \mbox{\hyperlink{classBarco_a326d47f05106e4add3fc22ec914ef78f}{comprando}};}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00010}00010\ \ \ \ \ pair<int,int>\ \mbox{\hyperlink{classBarco_afcfb6aae8beaf83cedb09257b2bff4e2}{vendiendo}};}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00011}00011\ \ \ \ \ vector<string>\ \mbox{\hyperlink{classBarco_a77b20c4f1a8a565f43462a522e2c4509}{viajes}};}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00014}\mbox{\hyperlink{classBarco_a3fd698a54e7d0733a179c7a1def5859e}{00014}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBarco_a3fd698a54e7d0733a179c7a1def5859e}{Barco::modificar\_comprando}}(\textcolor{keywordtype}{int}\&\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ c)\ \{}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00015}00015\ \ \ \ \ this-\/>\mbox{\hyperlink{classBarco_a326d47f05106e4add3fc22ec914ef78f}{comprando}}.first\ =\ id;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00016}00016\ \ \ \ \ this-\/>\mbox{\hyperlink{classBarco_a326d47f05106e4add3fc22ec914ef78f}{comprando}}.second\ =\ c;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00019}\mbox{\hyperlink{classBarco_a6847ea5d06c79004872cf7b84aee9ede}{00019}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBarco_a6847ea5d06c79004872cf7b84aee9ede}{Barco::modificar\_vendiendo}}(\textcolor{keywordtype}{int}\&\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ c)\ \{}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00020}00020\ \ \ \ \ this-\/>\mbox{\hyperlink{classBarco_afcfb6aae8beaf83cedb09257b2bff4e2}{vendiendo}}.first\ =\ id;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00021}00021\ \ \ \ \ this-\/>\mbox{\hyperlink{classBarco_afcfb6aae8beaf83cedb09257b2bff4e2}{vendiendo}}.second\ =\ c;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00024}\mbox{\hyperlink{classBarco_a2726cbe3b9232b35f25f4c455ef647a1}{00024}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBarco_a2726cbe3b9232b35f25f4c455ef647a1}{Barco::agregar\_viaje}}(\textcolor{keywordtype}{string}\&\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{classBarco_a77b20c4f1a8a565f43462a522e2c4509}{viajes}}.push\_back(name);}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00028}\mbox{\hyperlink{classBarco_a0c10121667902699dfe5eb9fc98ea666}{00028}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBarco_a0c10121667902699dfe5eb9fc98ea666}{Barco::borrar\_viajes}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00029}00029\ \ \ \ \ vector<string>\ nuevosviajes;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00030}00030\ \ \ \ \ this-\/>\mbox{\hyperlink{classBarco_a77b20c4f1a8a565f43462a522e2c4509}{viajes}}\ =\ nuevosviajes;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00033}\mbox{\hyperlink{classBarco_aa994d250a877024dd6d400f1983c444d}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBarco_aa994d250a877024dd6d400f1983c444d}{Barco::escribir\_viajes}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ \ this-\/>\mbox{\hyperlink{classBarco_a77b20c4f1a8a565f43462a522e2c4509}{viajes}}.begin();\ it\ !=\ this-\/>\mbox{\hyperlink{classBarco_a77b20c4f1a8a565f43462a522e2c4509}{viajes}}.end();\ ++it)\ cout\ <<\ *it\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00036}\mbox{\hyperlink{classBarco_a3cabe5f53f92f894287d25055832c0d2}{00036}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBarco_a3cabe5f53f92f894287d25055832c0d2}{Barco::restar\_comprando}}(\textcolor{keywordtype}{int}\&\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00037}00037\ \ \ \ \ this-\/>\mbox{\hyperlink{classBarco_a326d47f05106e4add3fc22ec914ef78f}{comprando}}.second\ -\/=\ n;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00040}\mbox{\hyperlink{classBarco_ad27aea250515c9fe0c819adffedf3620}{00040}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBarco_ad27aea250515c9fe0c819adffedf3620}{Barco::restar\_vendiendo}}(\textcolor{keywordtype}{int}\&\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00041}00041\ \ \ \ \ this-\/>\mbox{\hyperlink{classBarco_afcfb6aae8beaf83cedb09257b2bff4e2}{vendiendo}}.second\ -\/=\ n;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00044}\mbox{\hyperlink{classBarco_a8d123d3b0692bbe74412bd3b5e07500e}{00044}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBarco_a8d123d3b0692bbe74412bd3b5e07500e}{Barco::consultar\_comprando}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{int}\ c\ =\ \mbox{\hyperlink{classBarco_a326d47f05106e4add3fc22ec914ef78f}{comprando}}.first;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00049}\mbox{\hyperlink{classBarco_aabc8feb7c404448366bc53dfe367f554}{00049}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBarco_aabc8feb7c404448366bc53dfe367f554}{Barco::consultar\_comprando\_cantidad}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{int}\ cc\ =\ \mbox{\hyperlink{classBarco_a326d47f05106e4add3fc22ec914ef78f}{comprando}}.second;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{return}\ cc;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00054}\mbox{\hyperlink{classBarco_ae3844b5e2e0f87e0637c6a523998e694}{00054}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBarco_ae3844b5e2e0f87e0637c6a523998e694}{Barco::consultar\_vendiendo}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{int}\ v\ =\ \mbox{\hyperlink{classBarco_afcfb6aae8beaf83cedb09257b2bff4e2}{vendiendo}}.first;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{return}\ v;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00059}\mbox{\hyperlink{classBarco_afc10342f6d04f39dd0f2846e284c26c5}{00059}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBarco_afc10342f6d04f39dd0f2846e284c26c5}{Barco::consultar\_vendiendo\_cantidad}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00060}00060\ \ \ \ \ \textcolor{keywordtype}{int}\ vc\ =\ \mbox{\hyperlink{classBarco_afcfb6aae8beaf83cedb09257b2bff4e2}{vendiendo}}.second;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{return}\ vc;}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00062}00062\ \}}
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{Barco_8cc_source_l00070}00070\ }
+
+\end{DoxyCode}

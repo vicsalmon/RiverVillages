@@ -1,0 +1,382 @@
+\doxysection{Cuenca.\+cc}
+\hypertarget{Cuenca_8cc_source}{}\label{Cuenca_8cc_source}\mbox{\hyperlink{Cuenca_8cc}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Cuenca_8hh}{Cuenca.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00008}\mbox{\hyperlink{classCuenca_adef9dac47f2c1d8120a55b54b497efda}{00008}}\ \mbox{\hyperlink{classCuenca_adef9dac47f2c1d8120a55b54b497efda}{Cuenca::Cuenca}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00009}00009\ \ \ \ \ BinTree<Ciudad>\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00010}00010\ \ \ \ \ \mbox{\hyperlink{classBarco}{Barco}}\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00011}00011\ \ \ \ \ map\ <string,Ciudad>\ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00014}\mbox{\hyperlink{classCuenca_ab82637378fbdd63d981139f79fd45fe6}{00014}}\ BinTree<string>\ \mbox{\hyperlink{classCuenca_ab82637378fbdd63d981139f79fd45fe6}{Cuenca::leer\_rio\_helper}}(\textcolor{keywordtype}{string}\&\ hashtag,\ map\ <string,Ciudad>\&\ inventario)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{string}\ s;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00016}00016\ \ \ \ \ cin\ >>\ s;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (s\ ==\ hashtag)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00018}00018\ \ \ \ \ \ \ \ \ BinTree<string>\ e;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ e;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ ciudad\ =\ s;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCiudad}{Ciudad}}\ ciudadvacia;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00024}00024\ \ \ \ \ \ \ \ \ inventario[s]\ =\ ciudadvacia;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00025}00025\ \ \ \ \ \ \ \ \ BinTree<string>\ l(\mbox{\hyperlink{classCuenca_ab82637378fbdd63d981139f79fd45fe6}{leer\_rio\_helper}}(hashtag,\ inventario));}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00026}00026\ \ \ \ \ \ \ \ \ BinTree<string>\ r(\mbox{\hyperlink{classCuenca_ab82637378fbdd63d981139f79fd45fe6}{leer\_rio\_helper}}(hashtag,\ inventario));}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00027}00027\ \ \ \ \ \ \ \ \ BinTree<string>\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}(ciudad,\ l,\ r);\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00032}\mbox{\hyperlink{classCuenca_acc5287985f4a09005e4cb0b883543f3b}{00032}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCuenca_acc5287985f4a09005e4cb0b883543f3b}{Cuenca::ciudad\_existe}}(\textcolor{keywordtype}{string}\&\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00033}00033\ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ this-\/>\mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}.find(name);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ it\ !=\ this-\/>\mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}.end();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00037}\mbox{\hyperlink{classCuenca_a529e35e876f731b016dbca367cb064d2}{00037}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_a529e35e876f731b016dbca367cb064d2}{Cuenca::leer\_rio}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{string}\ first;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00039}00039\ \ \ \ \ cin\ >>\ first;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}\ (first\ !=\ \textcolor{stringliteral}{"{}\#"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}.clear();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ primeraciudad\ =\ first;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00043}00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCiudad}{Ciudad}}\ ciudadvacia;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[first]\ =\ ciudadvacia;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ hashtag\ =\ \textcolor{stringliteral}{"{}\#"{}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00046}00046\ \ \ \ \ \ \ \ \ BinTree<string>\ l(\mbox{\hyperlink{classCuenca_ab82637378fbdd63d981139f79fd45fe6}{leer\_rio\_helper}}(hashtag,\ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}));}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00047}00047\ \ \ \ \ \ \ \ \ BinTree<string>\ r(\mbox{\hyperlink{classCuenca_ab82637378fbdd63d981139f79fd45fe6}{leer\_rio\_helper}}(hashtag,\ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}));}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00048}00048\ \ \ \ \ \ \ \ \ BinTree<string>\ t(primeraciudad,\ l,\ r);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00049}00049\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}\ =\ t;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00053}\mbox{\hyperlink{classCuenca_a66269e2727aeefad763bd384a55ccd02}{00053}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_a66269e2727aeefad763bd384a55ccd02}{Cuenca::modificar\_barco}}(\textcolor{keywordtype}{int}\&\ idcompra,\ \textcolor{keywordtype}{int}\&\ cantidadcompra,\ \textcolor{keywordtype}{int}\&\ idvende,\ \textcolor{keywordtype}{int}\&\ cantidadvende)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{if}\ (idcompra\ !=\ idvende)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00055}00055\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a3fd698a54e7d0733a179c7a1def5859e}{modificar\_comprando}}(idcompra,\ cantidadcompra);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00056}00056\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a6847ea5d06c79004872cf7b84aee9ede}{modificar\_vendiendo}}(idvende,\ cantidadvende);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{else}\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ se\ puede\ comprar\ y\ vender\ el\ mismo\ producto"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00059}00059\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00061}\mbox{\hyperlink{classCuenca_a91c920835b1895479e7b4e0590fa9e03}{00061}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_a91c920835b1895479e7b4e0590fa9e03}{Cuenca::escribir\_barco}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00062}00062\ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a8d123d3b0692bbe74412bd3b5e07500e}{consultar\_comprando}}()\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00063}00063\ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_aabc8feb7c404448366bc53dfe367f554}{consultar\_comprando\_cantidad}}()\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00064}00064\ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_ae3844b5e2e0f87e0637c6a523998e694}{consultar\_vendiendo}}()\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00065}00065\ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_afc10342f6d04f39dd0f2846e284c26c5}{consultar\_vendiendo\_cantidad}}()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00066}00066\ \ \ \ \ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_aa994d250a877024dd6d400f1983c444d}{escribir\_viajes}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00069}\mbox{\hyperlink{classCuenca_a2d1b822f763e5684058584d2c52c4ec5}{00069}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_a2d1b822f763e5684058584d2c52c4ec5}{Cuenca::anadir\_viaje\_barco}}(\textcolor{keywordtype}{string}\&\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00070}00070\ \ \ \ \ this-\/>\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a2726cbe3b9232b35f25f4c455ef647a1}{agregar\_viaje}}(name);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00071}00071\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00073}\mbox{\hyperlink{classCuenca_ab7a38d4593b3fe6be7773111c9b575a5}{00073}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_ab7a38d4593b3fe6be7773111c9b575a5}{Cuenca::borrar\_viajes\_barco}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00074}00074\ \ \ \ \ this-\/>\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a0c10121667902699dfe5eb9fc98ea666}{borrar\_viajes}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00075}00075\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00077}\mbox{\hyperlink{classCuenca_adbb68639f7eb155d66875810c884bd34}{00077}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_adbb68639f7eb155d66875810c884bd34}{Cuenca::leer\_inventario}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProductos}{Productos}}\&\ p)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00078}00078\ \ \ \ \ \mbox{\hyperlink{classCiudad}{Ciudad}}\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{if}\ (not(\mbox{\hyperlink{classCuenca_acc5287985f4a09005e4cb0b883543f3b}{ciudad\_existe}}(name)))\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00080}00080\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ la\ ciudad"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00082}00082\ \ \ \ \ \ \ \ \ cin\ >>\ n;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id,\ tiene,\ necesita;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ \textcolor{keywordtype}{id}\ >>\ tiene\ >>\ necesita;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00086}00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00090}00090\ \ \ \ \ \ \ \ \ cin\ >>\ n;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tiene;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ necesita;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ \textcolor{keywordtype}{id}\ >>\ tiene\ >>\ necesita;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.\mbox{\hyperlink{classCiudad_aa0d65b68e8db5b046238815c6457508e}{determinar\_cantidad}}(\textcolor{keywordtype}{id},\ tiene,\ p);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.determinar\_necesarios(\textcolor{keywordtype}{id},\ necesita);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00100}00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00101}00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name]\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00102}00102\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00103}00103\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00105}\mbox{\hyperlink{classCuenca_a84a044b5887f6a94cdc5de3af476a483}{00105}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_a84a044b5887f6a94cdc5de3af476a483}{Cuenca::leer\_inventarios}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProductos}{Productos}}\&\ p)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00106}00106\ \ \ \ \ \textcolor{keywordtype}{string}\ name;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00107}00107\ \ \ \ \ \textcolor{keywordflow}{while}\ (cin\ >>\ name\ and\ name\ !=\ \textcolor{stringliteral}{"{}\#"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00108}00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCiudad}{Ciudad}}\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00110}00110\ \ \ \ \ \ \ \ \ cin\ >>\ n;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tiene;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ necesita;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ \textcolor{keywordtype}{id}\ >>\ tiene\ >>\ necesita;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.\mbox{\hyperlink{classCiudad_aa0d65b68e8db5b046238815c6457508e}{determinar\_cantidad}}(\textcolor{keywordtype}{id},\ tiene,\ p);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.determinar\_necesarios(\textcolor{keywordtype}{id},\ necesita);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00119}00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00120}00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00121}00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name]\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00122}00122\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00123}00123\ \ \ \ \ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name].eliminar\_inventario();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00124}00124\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00126}\mbox{\hyperlink{classCuenca_a51fc395c77dd9df7d4f431b2c8890baf}{00126}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_a51fc395c77dd9df7d4f431b2c8890baf}{Cuenca::escribir\_ciudad}}(\textcolor{keywordtype}{string}\&\ name)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00127}00127\ \ \ \ \ \textcolor{keywordflow}{if}\ (not(\mbox{\hyperlink{classCuenca_acc5287985f4a09005e4cb0b883543f3b}{ciudad\_existe}}(name)))\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ la\ ciudad"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00128}00128\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00129}00129\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCiudad}{Ciudad}}\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}\ =\ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name];}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00130}00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.\mbox{\hyperlink{classCiudad_a8c0b1b390d5316f47ae13338a742ea89}{escribir\_inv\_ciudad}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00131}00131\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_peso\_total()\ <<\ \textcolor{charliteral}{'\ '}\ <<\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_volumen\_total()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00132}00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name]\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00133}00133\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00134}00134\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00136}\mbox{\hyperlink{classCuenca_a392e37bf40c352749f726ce3c30447f7}{00136}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_a392e37bf40c352749f726ce3c30447f7}{Cuenca::poner\_prod}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{int}\&\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\&\ tiene,\ \textcolor{keywordtype}{int}\&\ necesita,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProductos}{Productos}}\&\ p)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00137}00137\ \ \ \ \ \textcolor{keywordflow}{if}\ (not(\mbox{\hyperlink{classCuenca_acc5287985f4a09005e4cb0b883543f3b}{ciudad\_existe}}(name)))\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ la\ ciudad"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00138}00138\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00139}00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCiudad}{Ciudad}}\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}\ =\ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name];}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.existe\_producto(\textcolor{keywordtype}{id}))cout\ <<\ \textcolor{stringliteral}{"{}error:\ la\ ciudad\ ya\ tiene\ el\ producto"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00141}00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.\mbox{\hyperlink{classCiudad_aa0d65b68e8db5b046238815c6457508e}{determinar\_cantidad}}(\textcolor{keywordtype}{id},\ tiene,\ p);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.determinar\_necesarios(\textcolor{keywordtype}{id},\ necesita);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_peso\_total()\ <<\ \textcolor{charliteral}{'\ '}\ <<\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_volumen\_total()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name]\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00146}00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00147}00147\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00148}00148\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00150}\mbox{\hyperlink{classCuenca_ae02275148d88cb5cae4b5af6bbb3a026}{00150}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_ae02275148d88cb5cae4b5af6bbb3a026}{Cuenca::modificar\_prod}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{int}\&\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\&\ tiene,\ \textcolor{keywordtype}{int}\&\ necesita,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProductos}{Productos}}\&\ p)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00151}00151\ \ \ \ \ \textcolor{keywordflow}{if}\ (not(\mbox{\hyperlink{classCuenca_acc5287985f4a09005e4cb0b883543f3b}{ciudad\_existe}}(name)))\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ la\ ciudad"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00152}00152\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00153}00153\ \ \ \ \ \mbox{\hyperlink{classCiudad}{Ciudad}}\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}\ =\ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name];}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00154}00154\ \ \ \ \ \textcolor{keywordflow}{if}\ (not(\mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.existe\_producto(\textcolor{keywordtype}{id})))\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ la\ ciudad\ no\ tiene\ el\ producto"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00155}00155\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.\mbox{\hyperlink{classCiudad_aa0d65b68e8db5b046238815c6457508e}{determinar\_cantidad}}(\textcolor{keywordtype}{id},\ tiene,\ p);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.determinar\_necesarios(\textcolor{keywordtype}{id},\ necesita);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_peso\_total()\ <<\ \textcolor{charliteral}{'\ '}\ <<\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_volumen\_total()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name]\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00160}00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00161}00161\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00162}00162\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00164}\mbox{\hyperlink{classCuenca_af47b5c6cc67b121300f544aa15f086a2}{00164}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_af47b5c6cc67b121300f544aa15f086a2}{Cuenca::quitar\_prod}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{int}\&\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProductos}{Productos}}\&\ p)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00165}00165\ \ \ \ \ \textcolor{keywordflow}{if}\ (not(\mbox{\hyperlink{classCuenca_acc5287985f4a09005e4cb0b883543f3b}{ciudad\_existe}}(name)))\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ la\ ciudad"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00166}00166\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00167}00167\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCiudad}{Ciudad}}\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}\ =\ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name];}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (not(\mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.existe\_producto(\textcolor{keywordtype}{id})))\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ la\ ciudad\ no\ tiene\ el\ producto"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00169}00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00170}00170\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.\mbox{\hyperlink{classCiudad_a29562d39f0ee7f81e1d1f5c6825b615e}{borrar\_producto}}(\textcolor{keywordtype}{id},\ p);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00171}00171\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_peso\_total()\ <<\ \textcolor{charliteral}{'\ '}\ <<\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_volumen\_total()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00172}00172\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name]\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00173}00173\ \ \ \ \ \ \ \ \ \}\ \ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00174}00174\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00175}00175\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00177}\mbox{\hyperlink{classCuenca_ab8b9ffc55b8f8f5964aa51fdce240765}{00177}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_ab8b9ffc55b8f8f5964aa51fdce240765}{Cuenca::consultar\_prod}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{int}\&\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00178}00178\ \ \ \ \ \textcolor{keywordflow}{if}\ (not(\mbox{\hyperlink{classCuenca_acc5287985f4a09005e4cb0b883543f3b}{ciudad\_existe}}(name)))\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ la\ ciudad"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00179}00179\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00180}00180\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCiudad}{Ciudad}}\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}\ =\ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name];}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00181}00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (not(\mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.existe\_producto(\textcolor{keywordtype}{id})))\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ la\ ciudad\ no\ tiene\ el\ producto"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00182}00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.\mbox{\hyperlink{classCiudad_af29ac9873be2b31520e9aaaa7f258911}{consultar\_cantidad}}(\textcolor{keywordtype}{id})\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_necesarios(\textcolor{keywordtype}{id})\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[name]\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00186}00186\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00187}00187\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00188}00188\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00189}00189\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00190}\mbox{\hyperlink{classCuenca_af2d1037c03227171dc849147dd6ab344}{00190}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_af2d1037c03227171dc849147dd6ab344}{Cuenca::comerciar}}(\textcolor{keywordtype}{string}\ ciudad1,\ \textcolor{keywordtype}{string}\ ciudad2,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProductos}{Productos}}\&\ prod)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00191}00191\ \ \ \ \ \textcolor{keywordflow}{if}\ (not(\mbox{\hyperlink{classCuenca_acc5287985f4a09005e4cb0b883543f3b}{ciudad\_existe}}(ciudad1))\ or\ not(\mbox{\hyperlink{classCuenca_acc5287985f4a09005e4cb0b883543f3b}{ciudad\_existe}}(ciudad2)))\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ la\ ciudad"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00192}00192\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00193}00193\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_acd2b488d25005eb5c76418b34d8e213e}{comerciar\_helper}}(\mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[ciudad1],\ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[ciudad2],\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00194}00194\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00195}00195\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00198}\mbox{\hyperlink{classCuenca_ab2ee0c439be680f51ca58538934c4db2}{00198}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_ab2ee0c439be680f51ca58538934c4db2}{Cuenca::redistribuir\_helper}}(\textcolor{keyword}{const}\ BinTree<string>\&\ t,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProductos}{Productos}}\&\ prod)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00199}00199\ \ \ \ \ \textcolor{comment}{//caso\ baseç}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00200}00200\ \ \ \ \ \textcolor{keywordflow}{if}\ (t.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00201}00201\ \ \ \ \ \textcolor{comment}{//caso\ general}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00202}00202\ \ \ \ \ \textcolor{keywordflow}{if}\ (not(t.left().empty()))\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_af2d1037c03227171dc849147dd6ab344}{comerciar}}(t.value(),\ t.left().value(),\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_af2d1037c03227171dc849147dd6ab344}{comerciar}}(t.value(),\ t.right().value(),\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_ab2ee0c439be680f51ca58538934c4db2}{redistribuir\_helper}}(t.left(),\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_ab2ee0c439be680f51ca58538934c4db2}{redistribuir\_helper}}(t.right(),\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00207}00207\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00208}00208\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00210}\mbox{\hyperlink{classCuenca_a7431e7ff8b038dddbbbb03199e00e24a}{00210}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_a7431e7ff8b038dddbbbb03199e00e24a}{Cuenca::redistribuir}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProductos}{Productos}}\&\ prod)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00211}00211\ \ \ \ \ \mbox{\hyperlink{classCuenca_ab2ee0c439be680f51ca58538934c4db2}{redistribuir\_helper}}(\mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}},\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00212}00212\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00213}00213\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00214}\mbox{\hyperlink{classCuenca_a57262995e6ef47ab50c2881ce7bd05c8}{00214}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCuenca_a57262995e6ef47ab50c2881ce7bd05c8}{Cuenca::simular\_comercio}}(\mbox{\hyperlink{classBarco}{Barco}}\&\ barco,\ \mbox{\hyperlink{classCiudad}{Ciudad}}\&\ c)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00215}00215\ \ \ \ \ \textcolor{keywordtype}{int}\ compras\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00216}00216\ \ \ \ \ \textcolor{keywordtype}{int}\ ventas\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00217}00217\ \ \ \ \ \textcolor{keywordtype}{int}\ idc\ =\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a8d123d3b0692bbe74412bd3b5e07500e}{consultar\_comprando}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00218}00218\ \ \ \ \ \textcolor{keywordtype}{int}\ idv\ =\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_ae3844b5e2e0f87e0637c6a523998e694}{consultar\_vendiendo}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00219}00219\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.existe\_producto(idc))\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00220}00220\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ oferta\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_cantidad(idc)\ -\/\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_necesarios(idc);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00221}00221\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (oferta\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_aabc8feb7c404448366bc53dfe367f554}{consultar\_comprando\_cantidad}}()\ >\ oferta)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ compras\ +=\ oferta;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a3cabe5f53f92f894287d25055832c0d2}{restar\_comprando}}(oferta);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ compras\ +=\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_aabc8feb7c404448366bc53dfe367f554}{consultar\_comprando\_cantidad}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a3fd698a54e7d0733a179c7a1def5859e}{modificar\_comprando}}(idc,\ 0);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00230}00230\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00231}00231\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00232}00232\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.existe\_producto(idv))\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00233}00233\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ demanda\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_necesarios(idv)\ -\/\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_cantidad(idv);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00234}00234\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (demanda\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_afc10342f6d04f39dd0f2846e284c26c5}{consultar\_vendiendo\_cantidad}}()\ <\ demanda)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ventas\ +=\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_afc10342f6d04f39dd0f2846e284c26c5}{consultar\_vendiendo\_cantidad}}();\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a6847ea5d06c79004872cf7b84aee9ede}{modificar\_vendiendo}}(idv,\ 0);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ventas\ +=\ demanda;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_ad27aea250515c9fe0c819adffedf3620}{restar\_vendiendo}}(demanda);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00243}00243\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00244}00244\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00245}00245\ \ \ \ \ \textcolor{keywordflow}{return}\ compras\ +\ ventas;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00246}00246\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00248}\mbox{\hyperlink{classCuenca_a8c8ff8af38bda6f189d203b765e3a47a}{00248}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_a8c8ff8af38bda6f189d203b765e3a47a}{Cuenca::encontrar\_ruta\_optima}}(\mbox{\hyperlink{classBarco}{Barco}}\&\ barcoaux,\ \textcolor{keyword}{const}\ BinTree<string>\&\ t,\ vector<string>\&\ rutaactual,\ \textcolor{keywordtype}{int}\ sumaactual,\ vector<string>\&\ mejorruta,\ \textcolor{keywordtype}{int}\&\ mejorsuma)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00249}00249\ \ \ \ \ rutaactual.push\_back(t.value());}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00250}00250\ \ \ \ \ \textcolor{keywordtype}{int}\ antescompraba\ =\ barcoaux.\mbox{\hyperlink{classBarco_aabc8feb7c404448366bc53dfe367f554}{consultar\_comprando\_cantidad}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00251}00251\ \ \ \ \ \textcolor{keywordtype}{int}\ antesvendia\ =\ barcoaux.\mbox{\hyperlink{classBarco_afc10342f6d04f39dd0f2846e284c26c5}{consultar\_vendiendo\_cantidad}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00252}00252\ \ \ \ \ \mbox{\hyperlink{classCiudad}{Ciudad}}\ city\ =\ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[t.value()];}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00253}00253\ \ \ \ \ \textcolor{keywordtype}{int}\ compraventas\ =\ \mbox{\hyperlink{classCuenca_a57262995e6ef47ab50c2881ce7bd05c8}{simular\_comercio}}(barcoaux,\ city);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00254}00254\ \ \ \ \ sumaactual\ +=\ compraventas;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00255}00255\ \ \ \ \ \textcolor{keywordflow}{if}\ (compraventas\ >\ 0)\ \{\ \ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00256}00256\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((sumaactual\ >\ mejorsuma)\ or\ (sumaactual\ ==\ mejorsuma\ and\ rutaactual.size()\ <\ mejorruta.size()))\ \{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ mejorsuma\ =\ sumaactual;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ mejorruta\ =\ rutaactual;\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00259}00259\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00260}00260\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00261}00261\ \ \ \ \ \textcolor{keywordflow}{if}\ (not\ t.left().empty())\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00262}00262\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a8c8ff8af38bda6f189d203b765e3a47a}{encontrar\_ruta\_optima}}(barcoaux,\ t.left(),\ rutaactual,\ sumaactual,\ mejorruta,\ mejorsuma);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00263}00263\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a8c8ff8af38bda6f189d203b765e3a47a}{encontrar\_ruta\_optima}}(barcoaux,\ t.right(),\ rutaactual,\ sumaactual,\ mejorruta,\ mejorsuma);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00264}00264\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00265}00265\ \ \ \ \ rutaactual.pop\_back();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00266}00266\ \ \ \ \ sumaactual\ -\/=\ compraventas;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00267}00267\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}\ =\ barcoaux.\mbox{\hyperlink{classBarco_a8d123d3b0692bbe74412bd3b5e07500e}{consultar\_comprando}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00268}00268\ \ \ \ \ \textcolor{keywordtype}{int}\ v\ =\ barcoaux.\mbox{\hyperlink{classBarco_ae3844b5e2e0f87e0637c6a523998e694}{consultar\_vendiendo}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00269}00269\ \ \ \ \ barcoaux.\mbox{\hyperlink{classBarco_a3fd698a54e7d0733a179c7a1def5859e}{modificar\_comprando}}(\mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}},\ antescompraba);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00270}00270\ \ \ \ \ barcoaux.\mbox{\hyperlink{classBarco_a6847ea5d06c79004872cf7b84aee9ede}{modificar\_vendiendo}}(v,\ antesvendia);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00271}00271\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00272}00272\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00273}\mbox{\hyperlink{classCuenca_acd2b488d25005eb5c76418b34d8e213e}{00273}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_acd2b488d25005eb5c76418b34d8e213e}{Cuenca::comerciar\_helper}}(\mbox{\hyperlink{classCiudad}{Ciudad}}\&\ c1,\ \mbox{\hyperlink{classCiudad}{Ciudad}}\&\ c2,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProductos}{Productos}}\&\ prod)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00274}00274\ \ \ \ \ map\ <int,int>\ inv;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00275}00275\ \ \ \ \ \mbox{\hyperlink{classCiudad}{Ciudad}}\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00276}00276\ \ \ \ \ \textcolor{keywordflow}{if}\ (c1.\mbox{\hyperlink{classCiudad_aa000799283488af783935fd039011335}{consultar\_tamano\_inv}}()\ <\ c2.\mbox{\hyperlink{classCiudad_aa000799283488af783935fd039011335}{consultar\_tamano\_inv}}())\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00277}00277\ \ \ \ \ \ \ \ \ inv\ =\ c1.\mbox{\hyperlink{classCiudad_a2024fb6ec7f9d0933c0775b5dcfae832}{consultar\_inv}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00278}00278\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}\ =\ c2;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00279}00279\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00280}00280\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00281}00281\ \ \ \ \ \ \ \ \ inv\ =\ c2.\mbox{\hyperlink{classCiudad_a2024fb6ec7f9d0933c0775b5dcfae832}{consultar\_inv}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00282}00282\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}\ =\ c1;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00283}00283\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00284}00284\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ inv.begin();\ it\ !=\ inv.end();\ ++it)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00285}00285\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ it-\/>first;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00286}00286\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.existe\_producto(\textcolor{keywordtype}{id}))\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (c1.\mbox{\hyperlink{classCiudad_af29ac9873be2b31520e9aaaa7f258911}{consultar\_cantidad}}(\textcolor{keywordtype}{id})\ >\ c1.\mbox{\hyperlink{classCiudad_a467b932929bfdb7b0863753d033eacc8}{consultar\_necesarios}}(\textcolor{keywordtype}{id})\ and\ c2.\mbox{\hyperlink{classCiudad_af29ac9873be2b31520e9aaaa7f258911}{consultar\_cantidad}}(\textcolor{keywordtype}{id})\ <\ c2.\mbox{\hyperlink{classCiudad_a467b932929bfdb7b0863753d033eacc8}{consultar\_necesarios}}(\textcolor{keywordtype}{id}))\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ oferta\ =\ c1.\mbox{\hyperlink{classCiudad_af29ac9873be2b31520e9aaaa7f258911}{consultar\_cantidad}}(\textcolor{keywordtype}{id})\ -\/\ c1.\mbox{\hyperlink{classCiudad_a467b932929bfdb7b0863753d033eacc8}{consultar\_necesarios}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ demanda\ =\ c2.\mbox{\hyperlink{classCiudad_a467b932929bfdb7b0863753d033eacc8}{consultar\_necesarios}}(\textcolor{keywordtype}{id})\ -\/\ c2.\mbox{\hyperlink{classCiudad_af29ac9873be2b31520e9aaaa7f258911}{consultar\_cantidad}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (oferta\ <\ demanda)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{classCiudad_acdd67f27fc3b8acc55ce9e98d97f65f5}{restar\_producto}}(\textcolor{keywordtype}{id},\ oferta,\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c2.\mbox{\hyperlink{classCiudad_a6de6b0dc9ba34917c277651e44a60e75}{sumar\_producto}}(\textcolor{keywordtype}{id},\ oferta,\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{classCiudad_acdd67f27fc3b8acc55ce9e98d97f65f5}{restar\_producto}}(\textcolor{keywordtype}{id},\ demanda,\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c2.\mbox{\hyperlink{classCiudad_a6de6b0dc9ba34917c277651e44a60e75}{sumar\_producto}}(\textcolor{keywordtype}{id},\ demanda,\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c1.\mbox{\hyperlink{classCiudad_af29ac9873be2b31520e9aaaa7f258911}{consultar\_cantidad}}(\textcolor{keywordtype}{id})\ <\ c1.\mbox{\hyperlink{classCiudad_a467b932929bfdb7b0863753d033eacc8}{consultar\_necesarios}}(\textcolor{keywordtype}{id})\ and\ c2.\mbox{\hyperlink{classCiudad_af29ac9873be2b31520e9aaaa7f258911}{consultar\_cantidad}}(\textcolor{keywordtype}{id})\ >\ c2.\mbox{\hyperlink{classCiudad_a467b932929bfdb7b0863753d033eacc8}{consultar\_necesarios}}(\textcolor{keywordtype}{id}))\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ oferta\ =\ c2.\mbox{\hyperlink{classCiudad_af29ac9873be2b31520e9aaaa7f258911}{consultar\_cantidad}}(\textcolor{keywordtype}{id})\ -\/\ c2.\mbox{\hyperlink{classCiudad_a467b932929bfdb7b0863753d033eacc8}{consultar\_necesarios}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ demanda\ =\ c1.\mbox{\hyperlink{classCiudad_a467b932929bfdb7b0863753d033eacc8}{consultar\_necesarios}}(\textcolor{keywordtype}{id})\ -\/\ c1.\mbox{\hyperlink{classCiudad_af29ac9873be2b31520e9aaaa7f258911}{consultar\_cantidad}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (oferta\ <\ demanda)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c2.\mbox{\hyperlink{classCiudad_acdd67f27fc3b8acc55ce9e98d97f65f5}{restar\_producto}}(\textcolor{keywordtype}{id},\ oferta,\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{classCiudad_a6de6b0dc9ba34917c277651e44a60e75}{sumar\_producto}}(\textcolor{keywordtype}{id},\ oferta,\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c2.\mbox{\hyperlink{classCiudad_acdd67f27fc3b8acc55ce9e98d97f65f5}{restar\_producto}}(\textcolor{keywordtype}{id},\ demanda,\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c1.\mbox{\hyperlink{classCiudad_a6de6b0dc9ba34917c277651e44a60e75}{sumar\_producto}}(\textcolor{keywordtype}{id},\ demanda,\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00311}00311\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00312}00312\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00313}00313\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00314}00314\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00315}\mbox{\hyperlink{classCuenca_a6af4a348f53b3b3c2ad0eb17ffbc616b}{00315}}\ vector<string>\ \mbox{\hyperlink{classCuenca_a6af4a348f53b3b3c2ad0eb17ffbc616b}{Cuenca::rutaoptima}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00316}00316\ \ \ \ \ vector<string>\ mejorruta;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00317}00317\ \ \ \ \ vector<string>\ rutaactual;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00318}00318\ \ \ \ \ \textcolor{keywordtype}{int}\ mejorsuma\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00319}00319\ \ \ \ \ \textcolor{keywordtype}{int}\ sumaactual\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00320}00320\ \ \ \ \ \mbox{\hyperlink{classBarco}{Barco}}\ barcoaux\ =\ this-\/>\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00321}00321\ \ \ \ \ \mbox{\hyperlink{classCuenca_a8c8ff8af38bda6f189d203b765e3a47a}{encontrar\_ruta\_optima}}(barcoaux,\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}},\ rutaactual,\ sumaactual,\ mejorruta,\ mejorsuma);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00322}00322\ \ \ \ \ \textcolor{keywordflow}{return}\ mejorruta;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00323}00323\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00325}\mbox{\hyperlink{classCuenca_a31cd7a52e9641fbcea7a073324e441c0}{00325}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_a31cd7a52e9641fbcea7a073324e441c0}{Cuenca::hacer\_viaje}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProductos}{Productos}}\&\ prod)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00326}00326\ \ \ \ \ \textcolor{keywordtype}{int}\ idc\ =\ this-\/>\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a8d123d3b0692bbe74412bd3b5e07500e}{consultar\_comprando}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00327}00327\ \ \ \ \ \textcolor{keywordtype}{int}\ cc\ =\ this-\/>\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_aabc8feb7c404448366bc53dfe367f554}{consultar\_comprando\_cantidad}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00328}00328\ \ \ \ \ \textcolor{keywordtype}{int}\ idv\ =\ this-\/>\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_ae3844b5e2e0f87e0637c6a523998e694}{consultar\_vendiendo}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00329}00329\ \ \ \ \ \textcolor{keywordtype}{int}\ cv\ =\ this-\/>\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_afc10342f6d04f39dd0f2846e284c26c5}{consultar\_vendiendo\_cantidad}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00330}00330\ \ \ \ \ vector<string>\ ruta\ =\ \mbox{\hyperlink{classCuenca_a6af4a348f53b3b3c2ad0eb17ffbc616b}{rutaoptima}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00331}00331\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ ruta.begin();\ it\ !=\ ruta.end();\ ++it)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCiudad}{Ciudad}}\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}\ =\ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[*it];}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.existe\_producto(idc))\mbox{\hyperlink{classCuenca_ae4f1cf541adebfa398e18a5952070201}{viaje\_comprar}}(\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}},\ prod,\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}});}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.existe\_producto(idv))\mbox{\hyperlink{classCuenca_a2716fd58b3ea0086880cb5bb61dc0f2c}{viaje\_vender}}(\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}},\ prod,\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}});}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_ae51004d3074dd18bfeb92920a795d203}{inventarios}}[*it]\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}};}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00336}00336\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00337}00337\ \ \ \ \ \textcolor{keywordtype}{int}\ comprados\ =\ cc\ -\/\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_aabc8feb7c404448366bc53dfe367f554}{consultar\_comprando\_cantidad}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00338}00338\ \ \ \ \ \textcolor{keywordtype}{int}\ vendidos\ =\ cv\ -\/\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_afc10342f6d04f39dd0f2846e284c26c5}{consultar\_vendiendo\_cantidad}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00339}00339\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (comprados\ >\ 0\ or\ vendidos\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a2726cbe3b9232b35f25f4c455ef647a1}{agregar\_viaje}}(ruta[ruta.size()\ -\/\ 1]);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a3fd698a54e7d0733a179c7a1def5859e}{modificar\_comprando}}(idc,\ cc);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a6847ea5d06c79004872cf7b84aee9ede}{modificar\_vendiendo}}(idv,\ cv);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00343}00343\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00344}00344\ \ \ \ \ cout\ <<\ comprados+vendidos\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00345}00345\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00346}00346\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00347}\mbox{\hyperlink{classCuenca_ae4f1cf541adebfa398e18a5952070201}{00347}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_ae4f1cf541adebfa398e18a5952070201}{Cuenca::viaje\_comprar}}(\mbox{\hyperlink{classBarco}{Barco}}\&\ barco,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProductos}{Productos}}\&\ prod,\ \mbox{\hyperlink{classCiudad}{Ciudad}}\&\ c)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00348}00348\ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a8d123d3b0692bbe74412bd3b5e07500e}{consultar\_comprando}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00349}00349\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ oferta\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_cantidad(\textcolor{keywordtype}{id})\ -\/\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_necesarios(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00350}00350\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (oferta\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00351}00351\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (oferta\ <\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_aabc8feb7c404448366bc53dfe367f554}{consultar\_comprando\_cantidad}}())\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a3cabe5f53f92f894287d25055832c0d2}{restar\_comprando}}(oferta);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//this-\/>inv\_tiene[id]\ =\ this-\/>inv\_necesarios[id];}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.restar\_producto(\textcolor{keywordtype}{id},\ oferta,\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00355}00355\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00356}00356\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00357}00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//this-\/>inv\_tiene[id]\ -\/=\ barco.consultar\_comprando\_cantidad();}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00358}00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ can\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_cantidad(\textcolor{keywordtype}{id})\ -\/\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_aabc8feb7c404448366bc53dfe367f554}{consultar\_comprando\_cantidad}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00359}00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.determinar\_cantidad(\textcolor{keywordtype}{id},\ can,\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00360}00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a3fd698a54e7d0733a179c7a1def5859e}{modificar\_comprando}}(\textcolor{keywordtype}{id},\ 0);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00361}00361\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00362}00362\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00363}00363\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00364}00364\ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00365}00365\ }
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00366}\mbox{\hyperlink{classCuenca_a2716fd58b3ea0086880cb5bb61dc0f2c}{00366}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCuenca_a2716fd58b3ea0086880cb5bb61dc0f2c}{Cuenca::viaje\_vender}}(\mbox{\hyperlink{classBarco}{Barco}}\&\ barco,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProductos}{Productos}}\&\ prod,\ \mbox{\hyperlink{classCiudad}{Ciudad}}\&\ c)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00367}00367\ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_ae3844b5e2e0f87e0637c6a523998e694}{consultar\_vendiendo}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00368}00368\ \ \ \ \ \textcolor{keywordtype}{int}\ demanda\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_necesarios(\textcolor{keywordtype}{id})\ -\/\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_cantidad(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00369}00369\ \ \ \ \ \textcolor{keywordflow}{if}\ (demanda\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00370}00370\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_afc10342f6d04f39dd0f2846e284c26c5}{consultar\_vendiendo\_cantidad}}()\ <\ demanda)\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00371}00371\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ can\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_cantidad(\textcolor{keywordtype}{id})\ +\ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_afc10342f6d04f39dd0f2846e284c26c5}{consultar\_vendiendo\_cantidad}}();}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00372}00372\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.determinar\_cantidad(\textcolor{keywordtype}{id},\ can,\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_a6847ea5d06c79004872cf7b84aee9ede}{modificar\_vendiendo}}(\textcolor{keywordtype}{id},\ 0);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00374}00374\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00375}00375\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00376}00376\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_aa7ff1a1213cd6361f46ea8438f495a9c}{barco}}.\mbox{\hyperlink{classBarco_ad27aea250515c9fe0c819adffedf3620}{restar\_vendiendo}}(demanda);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nec\ =\ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.consultar\_necesarios(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00378}00378\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCuenca_a72b72a8565e12e15ab15f3b83c04121e}{c}}.determinar\_cantidad(\textcolor{keywordtype}{id},\ nec,\ prod);}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00379}00379\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00380}00380\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Cuenca_8cc_source_l00381}00381\ \}}
+
+\end{DoxyCode}

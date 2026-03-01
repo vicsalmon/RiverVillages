@@ -1,0 +1,166 @@
+\doxysection{program.\+cc}
+\hypertarget{program_8cc_source}{}\label{program_8cc_source}\mbox{\hyperlink{program_8cc}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Cuenca_8hh}{Cuenca.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Productos_8hh}{Productos.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00010}\mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{00010}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00011}00011\ \ \ \ \ \textcolor{comment}{//Productos}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00012}00012\ \ \ \ \ \textcolor{keywordtype}{int}\ n;\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00013}00013\ \ \ \ \ cin\ >>\ n;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{classProductos}{Productos}}\ productos;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ peso,\ volumen;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00017}00017\ \ \ \ \ \ \ \ \ cin\ >>\ peso\ >>\ volumen;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00018}00018\ \ \ \ \ \ \ \ \ productos.\mbox{\hyperlink{classProductos_a43e71682bce4e5ea1e417b5fba2fa66b}{anadir\_producto}}(peso,\ volumen);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//Cuenca}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{classCuenca}{Cuenca}}\ cuenca;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00022}00022\ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_a529e35e876f731b016dbca367cb064d2}{leer\_rio}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//Barco}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{int}\ idcompra;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00025}00025\ \ \ \ \ cin\ >>\ idcompra;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{int}\ cantidadcompra;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00027}00027\ \ \ \ \ cin\ >>\ cantidadcompra;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{int}\ idvende;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00029}00029\ \ \ \ \ cin\ >>\ idvende;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{int}\ cantidadvende;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00031}00031\ \ \ \ \ cin\ >>\ cantidadvende;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00032}00032\ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_a66269e2727aeefad763bd384a55ccd02}{modificar\_barco}}(idcompra,\ cantidadcompra,\ idvende,\ cantidadvende);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//comandos}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{string}\ s;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{while}\ (cin\ >>\ s\ and\ s\ !=\ \textcolor{stringliteral}{"{}fin"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}leer\_rio"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}lr"{}})\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_a529e35e876f731b016dbca367cb064d2}{leer\_rio}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_ab7a38d4593b3fe6be7773111c9b575a5}{borrar\_viajes\_barco}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}leer\_inventario"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}li"{}})\ \{\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ \textcolor{charliteral}{'\ '}\ <<\ name\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_adbb68639f7eb155d66875810c884bd34}{leer\_inventario}}(name,\ productos);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}leer\_inventarios"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}ls"{}})\ \{\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_a84a044b5887f6a94cdc5de3af476a483}{leer\_inventarios}}(productos);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}modificar\_barco"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}mb"{}})\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ idcompra;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ idcompra;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cantidadcompra;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ cantidadcompra;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ idvende;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ idvende;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cantidadvende;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ cantidadvende;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (idcompra\ >\ productos.\mbox{\hyperlink{classProductos_a2350545f5fc4a536ee03422d03f4a709}{consultar\_cantidad}}())\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ el\ producto"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (idvende\ >\ productos.\mbox{\hyperlink{classProductos_a2350545f5fc4a536ee03422d03f4a709}{consultar\_cantidad}}())\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ el\ producto"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ cuenca.\mbox{\hyperlink{classCuenca_a66269e2727aeefad763bd384a55ccd02}{modificar\_barco}}(idcompra,\ cantidadcompra,\ idvende,\ cantidadvende);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}escribir\_barco"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}eb"{}})\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_a91c920835b1895479e7b4e0590fa9e03}{escribir\_barco}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}consultar\_num"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}cn"{}})\ \{\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{charliteral}{'\#'}\ <<\ s\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ productos.\mbox{\hyperlink{classProductos_a2350545f5fc4a536ee03422d03f4a709}{consultar\_cantidad}}()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}agregar\_productos"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}ap"{}})\ \{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ n;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ peso,\ volumen;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ peso\ >>\ volumen;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ productos.\mbox{\hyperlink{classProductos_a43e71682bce4e5ea1e417b5fba2fa66b}{anadir\_producto}}(peso,volumen);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{charliteral}{'\#'}\ <<\ s\ <<\ \textcolor{charliteral}{'\ '}\ <<\ n\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}escribir\_producto"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}ep"{}})\ \{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{charliteral}{'\#'}\ <<\ s\ <<\ \textcolor{charliteral}{'\ '}\ <<\ \textcolor{keywordtype}{id}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{id}\ >\ productos.\mbox{\hyperlink{classProductos_a2350545f5fc4a536ee03422d03f4a709}{consultar\_cantidad}}())\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ el\ producto"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ productos.\mbox{\hyperlink{classProductos_af684dbc894a174cfede72d314339af99}{escribir}}(\textcolor{keywordtype}{id});\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}escribir\_ciudad"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}ec"{}})\ \{\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ \textcolor{charliteral}{'\ '}\ <<\ name\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_a51fc395c77dd9df7d4f431b2c8890baf}{escribir\_ciudad}}(name);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00097}00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}poner\_prod"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}pp"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id,\ tiene,\ necesita;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ \textcolor{keywordtype}{id}\ >>\ tiene\ >>\ necesita;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ \textcolor{charliteral}{'\ '}\ <<\ name\ <<\ \textcolor{charliteral}{'\ '}\ <<\ \textcolor{keywordtype}{id}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (productos.\mbox{\hyperlink{classProductos_a2350545f5fc4a536ee03422d03f4a709}{consultar\_cantidad}}()\ <\ \textcolor{keywordtype}{id})\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ el\ producto"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_a392e37bf40c352749f726ce3c30447f7}{poner\_prod}}(name,\ \textcolor{keywordtype}{id},\ tiene,\ necesita,\ productos);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00108}00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}modificar\_prod"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}mp"{}})\ \{\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id,\ tiene,\ necesita;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ \textcolor{keywordtype}{id}\ >>\ tiene\ >>\ necesita;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ \textcolor{charliteral}{'\ '}\ <<\ name\ <<\ \textcolor{charliteral}{'\ '}\ <<\ \textcolor{keywordtype}{id}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (productos.\mbox{\hyperlink{classProductos_a2350545f5fc4a536ee03422d03f4a709}{consultar\_cantidad}}()\ <\ \textcolor{keywordtype}{id})\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ el\ producto"{}}\ <<\ endl;\ \ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_ae02275148d88cb5cae4b5af6bbb3a026}{modificar\_prod}}(name,\ \textcolor{keywordtype}{id},\ tiene,\ necesita,\ productos);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00119}00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}quitar\_prod"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}qp"{}})\ \{\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ \textcolor{charliteral}{'\ '}\ <<\ name\ <<\ \textcolor{charliteral}{'\ '}\ <<\ \textcolor{keywordtype}{id}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (productos.\mbox{\hyperlink{classProductos_a2350545f5fc4a536ee03422d03f4a709}{consultar\_cantidad}}()\ <\ \textcolor{keywordtype}{id})\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ el\ producto"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_af47b5c6cc67b121300f544aa15f086a2}{quitar\_prod}}(name,\ \textcolor{keywordtype}{id},\ productos);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00130}00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}consultar\_prod"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}cp"{}})\ \{\ \ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ name;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ id;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ \textcolor{charliteral}{'\ '}\ <<\ name\ <<\ \textcolor{charliteral}{'\ '}\ <<\ \textcolor{keywordtype}{id}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (productos.\mbox{\hyperlink{classProductos_a2350545f5fc4a536ee03422d03f4a709}{consultar\_cantidad}}()\ <\ \textcolor{keywordtype}{id})\ cout\ <<\ \textcolor{stringliteral}{"{}error:\ no\ existe\ el\ producto"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_ab8b9ffc55b8f8f5964aa51fdce240765}{consultar\_prod}}(name,\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00141}00141\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00142}00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}comerciar"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}co"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ c1;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ c2;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ c1\ >>\ c2;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ \textcolor{charliteral}{'\ '}\ <<\ c1\ <<\ \textcolor{charliteral}{'\ '}\ <<\ c2\ <<\ endl;\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (c1\ ==\ c2)\ cout\ <<\textcolor{stringliteral}{"{}error:\ ciudad\ repetida"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_af2d1037c03227171dc849147dd6ab344}{comerciar}}(c1,\ c2,\ productos);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00151}00151\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00152}00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}redistribuir"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}re"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_a7431e7ff8b038dddbbbb03199e00e24a}{redistribuir}}(productos);\ }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00155}00155\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}hacer\_viaje"{}}\ or\ s\ ==\ \textcolor{stringliteral}{"{}hv"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\#"{}}\ <<\ s\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ cuenca.\mbox{\hyperlink{classCuenca_a31cd7a52e9641fbcea7a073324e441c0}{hacer\_viaje}}(productos);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00159}00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00160}00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (s\ ==\ \textcolor{stringliteral}{"{}//"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ consumir;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ getline(cin,\ consumir);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00163}00163\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00164}00164\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00165}00165\ \}}
+
+\end{DoxyCode}

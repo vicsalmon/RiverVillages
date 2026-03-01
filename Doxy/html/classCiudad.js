@@ -1,0 +1,25 @@
+var classCiudad =
+[
+    [ "Ciudad", "classCiudad.html#a58cb38dda8085e38bb0358ff54ca0e0c", null ],
+    [ "borrar_producto", "classCiudad.html#a29562d39f0ee7f81e1d1f5c6825b615e", null ],
+    [ "consultar_cantidad", "classCiudad.html#af29ac9873be2b31520e9aaaa7f258911", null ],
+    [ "consultar_inv", "classCiudad.html#a2024fb6ec7f9d0933c0775b5dcfae832", null ],
+    [ "consultar_necesarios", "classCiudad.html#a467b932929bfdb7b0863753d033eacc8", null ],
+    [ "consultar_peso_total", "classCiudad.html#a945f89312aee4d85a7ae10cc3310acb4", null ],
+    [ "consultar_tamano_inv", "classCiudad.html#aa000799283488af783935fd039011335", null ],
+    [ "consultar_volumen_total", "classCiudad.html#a6f45cc40b6d72715ba81e5ab041dcecb", null ],
+    [ "determinar_cantidad", "classCiudad.html#aa0d65b68e8db5b046238815c6457508e", null ],
+    [ "determinar_necesarios", "classCiudad.html#a631ee1d7368cedbce79e9bb224d33e22", null ],
+    [ "eliminar_inventario", "classCiudad.html#aab8a0e53a42e7618ff4b883b33ea558b", null ],
+    [ "escribir_inv_ciudad", "classCiudad.html#a8c0b1b390d5316f47ae13338a742ea89", null ],
+    [ "existe_producto", "classCiudad.html#a573d8a54a16fff86abba4868d1ce5289", null ],
+    [ "modificar_peso_total", "classCiudad.html#a5ddf1f63eb41edea554793be2153041c", null ],
+    [ "modificar_volumen_total", "classCiudad.html#aa97367c8aa3a66a489c5c0ee0b7211b1", null ],
+    [ "restar_producto", "classCiudad.html#acdd67f27fc3b8acc55ce9e98d97f65f5", null ],
+    [ "sumar_producto", "classCiudad.html#a6de6b0dc9ba34917c277651e44a60e75", null ],
+    [ "inv_necesarios", "classCiudad.html#ac84c51d2d17fd7e54740a8948a2e6f59", null ],
+    [ "inv_tiene", "classCiudad.html#a1a8eca1dd2a427b5b56c37b3867ff67b", null ],
+    [ "nombre", "classCiudad.html#a683ebfc173246dfd655d0056a91d06ef", null ],
+    [ "pesototal", "classCiudad.html#aa74fb47e4ae9f7b1a27c9e6ac96afabd", null ],
+    [ "volumentotal", "classCiudad.html#a43212aadc8a721e9aaedfa19328feeff", null ]
+];

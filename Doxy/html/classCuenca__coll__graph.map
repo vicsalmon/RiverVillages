@@ -1,0 +1,5 @@
+<map id="Cuenca" name="Cuenca">
+<area shape="rect" id="Node000001" title="Representa una cuenca fluvial." alt="" coords="5,96,71,123"/>
+<area shape="rect" id="Node000002" href="$classBarco.html" title="Representa un barco que comercia." alt="" coords="10,5,66,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="41,48,41,95,35,95,35,48"/>
+</map>
